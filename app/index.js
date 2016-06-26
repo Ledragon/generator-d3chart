@@ -8,6 +8,16 @@ module.exports = generators.Base.extend({
         generators.Base.apply(this, arguments);
         this.argument('appName', { type: String, required: true });
     },
+    // prompting: function () {
+    //     return this.prompt([{
+    //         type: 'input',
+    //         name: 'authorName',
+    //         message: 'Name of the author'
+    //     }]).then(function (answers) {
+    //         this.log(answers);
+    //         done();
+    //     }.bind(this));
+    // },
     writing: {
         packageJSON: function () {
             this.fs.copyTpl(
@@ -43,5 +53,10 @@ module.exports = generators.Base.extend({
                     packageName: _.kebabCase(this.appName)
                 });
         }
+    },
+    install: function () {
+        this.npmInstall();
+        this.spawnCommand('typings', ['install']);
+        this.spawnCommand('npm', ['run', 'serve']);
     }
 });
