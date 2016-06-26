@@ -1,0 +1,5 @@
+{
+  "name": "<%= packageName %>",
+  "version": false,
+  "dependencies": {}
+}
