@@ -1,0 +1,18 @@
+{
+  "name": "generator-d3chart",
+  "version": "1.0.0",
+  "description": "A generator for a page to draw d3 charts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "generator",
+    "d3"
+  ],
+  "author": "Hugues Stefanski",
+  "license": "MIT",
+  "dependencies": {
+    "yeoman-generator": "^0.23.4"
+  }
+}
